@@ -40,9 +40,13 @@ target_link_libraries(mb1242_driver_node
   mb1242_driver_lib
 )
 
-install(TARGETS
-  mb1242_driver_lib
-  mb1242_driver_node
+install(TARGETS mb1242_driver_lib
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+install(TARGETS mb1242_driver_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
